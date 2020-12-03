@@ -26,7 +26,9 @@ const Layout = ({ children }) => {
     <GridWrapper>
       <Nav siteTitle={data.site.siteMetadata?.title || `Title`} />
       <MainWrapper>{children}</MainWrapper>
-      <FooterWrapper>© {new Date().getFullYear()}, SamVW</FooterWrapper>
+      <FooterWrapper style={{ color: "white" }}>
+        © {new Date().getFullYear()}, SamVW
+      </FooterWrapper>
     </GridWrapper>
   )
 }

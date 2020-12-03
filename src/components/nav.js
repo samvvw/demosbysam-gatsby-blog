@@ -21,20 +21,27 @@ const Nav = ({ siteTitle }) => {
   return (
     <HeaderWrapper>
       <NavWrapper>
-        <div style={{ minWidth: `100px` }}>
-          <Img fluid={data.placeholderImage.childImageSharp.fluid} />
-        </div>
-        <h1>
-          <Link
-            to="/"
+        <Link
+          to="/"
+          style={{
+            color: `white`,
+            textDecoration: `none`,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            minWidth: "330px",
+          }}
+        >
+          {/* <div style={{ minWidth: `100px` }}> */}
+          <Img
+            fluid={data.placeholderImage.childImageSharp.fluid}
             style={{
-              color: `white`,
-              textDecoration: `none`,
+              minWidth: `100px`,
             }}
-          >
-            {siteTitle}
-          </Link>
-        </h1>
+          />
+          {/* </div> */}
+          <h1>{siteTitle}</h1>
+        </Link>
       </NavWrapper>
     </HeaderWrapper>
   )
