@@ -1,7 +1,25 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/ssr-apis/
- */
+import React from "react"
+import { createGlobalStyle, ThemeProvider } from "styled-components"
+import Theme from "./src/theme/theme"
 
-// You can delete this file if you're not using it
+const GlobalSyles = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    ${"" /* border: red solid 1px !important; */}
+  }
+  body,
+  html {
+    font-family: ${props => props.theme.fonts.main};
+    height: 100%;
+    background-color: ${props => props.theme.palette.surface.light2};
+  }
+`
+
+export const wrapRootElement = ({ element }) => (
+  <ThemeProvider theme={Theme}>
+    <GlobalSyles />
+    {element}
+  </ThemeProvider>
+)
