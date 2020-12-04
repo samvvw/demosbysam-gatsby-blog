@@ -29,14 +29,14 @@ const Nav = ({ siteTitle }) => {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            minWidth: "330px",
+            minWidth: "300px",
           }}
         >
           {/* <div style={{ minWidth: `100px` }}> */}
           <Img
             fluid={data.placeholderImage.childImageSharp.fluid}
             style={{
-              minWidth: `100px`,
+              minWidth: `80px`,
             }}
           />
           {/* </div> */}
