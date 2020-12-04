@@ -6,7 +6,7 @@ import { HeaderWrapper, NavWrapper } from "../elements"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const Nav = ({ siteTitle }) => {
+const Nav = ({ siteTitle, language }) => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "drawing_svg.png" }) {
@@ -41,7 +41,10 @@ const Nav = ({ siteTitle }) => {
           />
           {/* </div> */}
           <h1>{siteTitle}</h1>
+          <code>{language}</code>
         </Link>
+        <Link to="/es">Espa&ntilde;ol</Link> <br />
+        <Link to="/">English</Link> <br />
       </NavWrapper>
     </HeaderWrapper>
   )
