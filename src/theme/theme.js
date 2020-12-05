@@ -5,19 +5,38 @@ export default {
   },
   palette: {
     primary: {
-      light: "#6fbf73",
-      main: "#4caf50",
-      dark: "#357a38",
+      light: "#3F9BFC",
+      main: "#0054AD",
+      dark: "#002F61",
     },
     secondary: {
-      light: "#5393ff",
-      main: "#2979ff",
-      dark: "#1c54b2",
+      main: "#FFA200",
+      dark: "#B3760C",
     },
     accent: {
       light: "#ffb74d",
       main: "#ff9800",
       dark: "#f57c00",
+    },
+    error: {
+      light: "#e57373",
+      main: "#f44336",
+      dark: "#d32f2f",
+    },
+    warning: {
+      light: "#ffb74d",
+      main: "#ff9800",
+      dark: "#f57c00",
+    },
+    info: {
+      light: "#64b5f6",
+      main: "#2196f3",
+      dark: "#1976d2",
+    },
+    success: {
+      light: "#81c784",
+      main: "#4caf50",
+      dark: "#388e3c",
     },
     text: {
       light1: "#fff",

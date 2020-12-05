@@ -7,6 +7,10 @@ module.exports = {
     title: `SamVW Portfolio`,
     description: `Personal portfolio website, created using Gatsby.`,
     author: `@SamVVW`,
+    navLinks: {
+      en: ["Home", "About us", "Projects", "Blog", "Contact"],
+      es: ["Inicio", "Sobre nosotros", "Proyectos", "Blog", "Contacto"],
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

@@ -17,6 +17,10 @@ const Layout = ({ children, language }) => {
       site {
         siteMetadata {
           title
+          navLinks {
+            en
+            es
+          }
         }
       }
     }
@@ -27,6 +31,7 @@ const Layout = ({ children, language }) => {
       <Nav
         siteTitle={data.site.siteMetadata?.title || `Title`}
         language={language}
+        navLinks={data.site.siteMetadata.navLinks}
       />
       <MainWrapper>{children}</MainWrapper>
       <FooterWrapper style={{ color: "white" }}>

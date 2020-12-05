@@ -1,12 +1,18 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import { HeaderWrapper, NavWrapper } from "../elements"
+import {
+  HeaderWrapper,
+  NavWrapper,
+  LanguageWrapper,
+  NavLink,
+  ListWrapper,
+} from "../elements"
 
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const Nav = ({ siteTitle, language }) => {
+const Nav = ({ siteTitle, language, navLinks }) => {
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "drawing_svg.png" }) {
@@ -18,6 +24,22 @@ const Nav = ({ siteTitle, language }) => {
       }
     }
   `)
+
+  const navArr = language => {
+    if (language === "en") {
+      return navLinks.en.map(el => (
+        <NavLink key={el} to={`/${el.toLowerCase().split(" ").join("-")}`}>
+          {el}
+        </NavLink>
+      ))
+    } else {
+      return navLinks.es.map(el => (
+        <NavLink key={el} to={`/${el.toLowerCase().split(" ").join("-")}`}>
+          {el}
+        </NavLink>
+      ))
+    }
+  }
   return (
     <HeaderWrapper>
       <NavWrapper>
@@ -28,7 +50,7 @@ const Nav = ({ siteTitle, language }) => {
             textDecoration: `none`,
             display: "flex",
             alignItems: "center",
-            justifyContent: "space-between",
+            justifyContent: "flex-start",
             minWidth: "300px",
           }}
         >
@@ -37,15 +59,27 @@ const Nav = ({ siteTitle, language }) => {
             fluid={data.placeholderImage.childImageSharp.fluid}
             style={{
               minWidth: `80px`,
+              marginRight: "1rem",
             }}
           />
           {/* </div> */}
-          <h1>{siteTitle}</h1>
+          <h1
+            style={{
+              margin: "0 1rem",
+            }}
+          >
+            {siteTitle}
+          </h1>
           <code>{language}</code>
         </Link>
-        <Link to="/es">Espa&ntilde;ol</Link> <br />
-        <Link to="/">English</Link> <br />
+        <ListWrapper style={{ listStyle: "none" }}>
+          {navArr(language)}
+        </ListWrapper>
       </NavWrapper>
+      <LanguageWrapper>
+        <Link to="/es">Esp</Link> <br />
+        <Link to="/">Eng</Link> <br />
+      </LanguageWrapper>
     </HeaderWrapper>
   )
 }

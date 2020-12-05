@@ -1,4 +1,6 @@
+import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 export const HeaderWrapper = styled.header`
   width: 100%;
@@ -22,8 +24,9 @@ export const HeaderWrapper = styled.header`
 
 export const NavWrapper = styled.nav`
   grid-column: 2 / span 12;
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  justify-content: center;
   align-items: center;
 
   @media ${props => props.theme.breakpoints.tablet} {
@@ -32,5 +35,52 @@ export const NavWrapper = styled.nav`
 
   @media ${props => props.theme.breakpoints.tablet} {
     grid-column: 2 / span 6;
+  }
+`
+
+export const ListWrapper = styled.ul`
+  list-style: none;
+  grid-column: 2 / 3;
+  display: flex;
+  justify-content: space-around;
+`
+
+const NavList = props => {
+  return (
+    <li>
+      <Link {...props} />
+    </li>
+  )
+}
+export const NavLink = styled(props => <NavList {...props} />)`
+  text-decoration: none;
+  color: white;
+`
+
+export const ButtonWrapper = styled(props => <Link {...props} />)`
+  padding: 0.5rem 0.75rem;
+  background-color: ${props => props.theme.colors.main1};
+  border-radius: 0.5rem;
+  color: ${props => props.theme.colors.light1};
+  font-weight: 700;
+  font-size: 0.875rem;
+  width: fit-content;
+  transition: filter 0.3s ease;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    filter: brightness(110%);
+  }
+`
+
+export const LanguageWrapper = styled.div`
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  & > * {
+    margin: 0 0.1rem;
+    text-decoration: none;
+    color: white;
   }
 `
