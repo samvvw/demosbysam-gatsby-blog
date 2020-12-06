@@ -11,6 +11,7 @@ const IndexPage = ({ data, location }) => (
     language={location.pathname === "/" ? "en" : location.pathname.substring(1)}
   >
     <SEO title="Inicio" />
+    <h1>En construccion...</h1>
     <div style={{ maxWidth: `30px`, marginBottom: `1.45rem` }}>
       <Image />
     </div>
