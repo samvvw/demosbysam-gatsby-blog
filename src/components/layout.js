@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { GridWrapper, FooterWrapper, MainWrapper } from "../elements"
 import Nav from "./nav"
 
-const Layout = ({ children, language }) => {
+const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -30,7 +30,6 @@ const Layout = ({ children, language }) => {
     <GridWrapper>
       <Nav
         siteTitle={data.site.siteMetadata?.title || `Title`}
-        language={language}
         navLinks={data.site.siteMetadata.navLinks}
       />
       <MainWrapper>{children}</MainWrapper>
