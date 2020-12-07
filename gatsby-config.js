@@ -8,7 +8,7 @@ module.exports = {
     description: `Personal portfolio website, created using Gatsby.`,
     author: `@SamVVW`,
     navLinks: {
-      en: ["Home", "About us", "Projects", "Blog", "Contact"],
+      en: ["Home", "About", "Projects", "Blog", "Contact"],
       es: ["Inicio", "Sobre nosotros", "Proyectos", "Blog", "Contacto"],
     },
   },
@@ -53,14 +53,6 @@ module.exports = {
       options: {
         spaceId: process.env.SPACE_ID,
         accessToken: process.env.ACCESS_TOKEN,
-      },
-    },
-    {
-      resolve: "gatsby-plugin-i18n",
-      options: {
-        langKeyDefault: "en",
-        useLangKeyLayout: true,
-        prefixDefault: false,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

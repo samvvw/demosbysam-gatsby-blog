@@ -1,13 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import {
-  HeaderWrapper,
-  NavWrapper,
-  LanguageWrapper,
-  NavLink,
-  ListWrapper,
-} from "../elements"
+import { HeaderWrapper, NavWrapper, NavLink, ListWrapper } from "../elements"
 
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -25,20 +19,15 @@ const Nav = ({ siteTitle, language, navLinks }) => {
     }
   `)
 
-  const navArr = language => {
-    if (language === "en") {
-      return navLinks.en.map(el => (
-        <NavLink key={el} to={`/${el.toLowerCase().split(" ").join("-")}`}>
-          {el}
-        </NavLink>
-      ))
-    } else {
-      return navLinks.es.map(el => (
-        <NavLink key={el} to={`/${el.toLowerCase().split(" ").join("-")}`}>
-          {el}
-        </NavLink>
-      ))
-    }
+  const navArr = () => {
+    return navLinks.en.map(el => (
+      <NavLink
+        key={el}
+        to={`/${el !== "Home" ? el.toLowerCase().split(" ").join("-") : ""}`}
+      >
+        {el}
+      </NavLink>
+    ))
   }
   return (
     <HeaderWrapper>
@@ -76,10 +65,6 @@ const Nav = ({ siteTitle, language, navLinks }) => {
           {navArr(language)}
         </ListWrapper>
       </NavWrapper>
-      <LanguageWrapper>
-        <Link to="/es">Esp</Link> <br />
-        <Link to="/">Eng</Link> <br />
-      </LanguageWrapper>
     </HeaderWrapper>
   )
 }

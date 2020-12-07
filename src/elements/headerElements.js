@@ -72,15 +72,3 @@ export const ButtonWrapper = styled(props => <Link {...props} />)`
     filter: brightness(110%);
   }
 `
-
-export const LanguageWrapper = styled.div`
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  display: flex;
-  & > * {
-    margin: 0 0.1rem;
-    text-decoration: none;
-    color: white;
-  }
-`
