@@ -4,8 +4,8 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `SamVW Portfolio`,
-    description: `Personal portfolio website, created using Gatsby.`,
+    title: `Demos by Sam`,
+    description: `Coding demos website, created using Gatsby.`,
     author: `@SamVVW`,
     navLinks: {
       en: ["Home", "About", "Projects", "Blog", "Contact"],
