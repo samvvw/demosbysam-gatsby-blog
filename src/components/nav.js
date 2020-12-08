@@ -1,12 +1,23 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
-import { HeaderWrapper, NavWrapper, NavLink, ListWrapper } from "../elements"
-
+import React, { useState } from "react"
+import {
+  HeaderWrapper,
+  NavWrapper,
+  NavLink,
+  ListWrapper,
+  MenuWrapper,
+  DrawerWrapper,
+  CloseMenuWrapper,
+} from "../elements"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
+import MenuIcon from "@material-ui/icons/Menu"
+import CloseIcon from "@material-ui/icons/Close"
+
 const Nav = ({ siteTitle, language, navLinks }) => {
+  const [drawer, setDrawer] = useState({ drawer: "" })
   const data = useStaticQuery(graphql`
     query {
       placeholderImage: file(relativePath: { eq: "drawing_svg.png" }) {
@@ -28,6 +39,12 @@ const Nav = ({ siteTitle, language, navLinks }) => {
         {el}
       </NavLink>
     ))
+  }
+
+  const useDrawer = () => {
+    drawer.drawer === ""
+      ? setDrawer({ drawer: "open" })
+      : setDrawer({ drawer: "" })
   }
   return (
     <HeaderWrapper>
@@ -64,7 +81,15 @@ const Nav = ({ siteTitle, language, navLinks }) => {
         <ListWrapper style={{ listStyle: "none" }}>
           {navArr(language)}
         </ListWrapper>
+        <MenuWrapper>
+          <MenuIcon onClick={useDrawer} />
+        </MenuWrapper>
       </NavWrapper>
+      <DrawerWrapper className={`${drawer.drawer}`}>
+        <CloseMenuWrapper>
+          <CloseIcon onClick={useDrawer} fontSize="large" />
+        </CloseMenuWrapper>
+      </DrawerWrapper>
     </HeaderWrapper>
   )
 }
