@@ -25,7 +25,7 @@ export const HeaderWrapper = styled.header`
 export const NavWrapper = styled.nav`
   grid-column: 2 / span 12;
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 50% 50%;
   justify-content: center;
   align-items: center;
 
@@ -43,6 +43,14 @@ export const ListWrapper = styled.ul`
   grid-column: 2 / 3;
   display: flex;
   justify-content: space-around;
+
+  @media ${props => props.theme.breakpoints.tablet} {
+    display: none;
+  }
+
+  @media ${props => props.theme.breakpoints.tablet} {
+    display: none;
+  }
 `
 
 const NavList = props => {
@@ -70,5 +78,76 @@ export const ButtonWrapper = styled(props => <Link {...props} />)`
   &:hover,
   &:focus {
     filter: brightness(110%);
+  }
+`
+
+export const MenuWrapper = styled.div`
+  display: none;
+  color: ${props => props.theme.palette.text.light1};
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+  min-height: 80px;
+
+  & :hover {
+    color: ${props => props.theme.palette.text.light2};
+  }
+
+  @media ${props => props.theme.breakpoints.tablet} {
+    display: flex;
+  }
+
+  @media ${props => props.theme.breakpoints.tablet} {
+    display: flex;
+  }
+`
+
+export const DrawerWrapper = styled.div`
+  display: none;
+  position: fixed;
+  background-color: ${props => props.theme.palette.primary.main};
+  height: 100%;
+  width: 100%;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+
+  /* &.open {
+    transform: translateX(0%);
+    transition: transform 250ms ease-in-out;
+  } */
+
+  @media ${props => props.theme.breakpoints.tablet} {
+    display: flex;
+    &.open {
+      transform: translateX(50%);
+      transition: transform 250ms ease-in-out;
+    }
+  }
+
+  @media ${props => props.theme.breakpoints.mobile} {
+    display: flex;
+    &.open {
+      transform: translateX(0%);
+      transition: transform 250ms ease-in-out;
+    }
+  }
+`
+
+export const CloseMenuWrapper = styled.div`
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  color: ${props => props.theme.palette.text.light1};
+
+  & :hover {
+    color: ${props => props.theme.palette.text.light2};
+  }
+
+  @media ${props => props.theme.breakpoints.tablet} {
+    right: 55%;
+  }
+
+  @media ${props => props.theme.breakpoints.mobile} {
+    right: 5%;
   }
 `
