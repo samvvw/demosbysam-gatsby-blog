@@ -9,6 +9,7 @@ import {
   MenuWrapper,
   DrawerWrapper,
   CloseMenuWrapper,
+  DrawerLinksWrapper,
 } from "../elements"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -78,14 +79,13 @@ const Nav = ({ siteTitle, language, navLinks }) => {
           </h1>
           <code>{language}</code>
         </Link>
-        <ListWrapper style={{ listStyle: "none" }}>
-          {navArr(language)}
-        </ListWrapper>
+        <ListWrapper style={{ listStyle: "none" }}>{navArr()}</ListWrapper>
         <MenuWrapper>
           <MenuIcon onClick={useDrawer} />
         </MenuWrapper>
       </NavWrapper>
       <DrawerWrapper className={`${drawer.drawer}`}>
+        <DrawerLinksWrapper>{navArr()}</DrawerLinksWrapper>
         <CloseMenuWrapper>
           <CloseIcon onClick={useDrawer} fontSize="large" />
         </CloseMenuWrapper>

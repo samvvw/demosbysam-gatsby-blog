@@ -38,11 +38,25 @@ export const NavWrapper = styled.nav`
   }
 `
 
+// Nav links wrapper for desktop version
+
 export const ListWrapper = styled.ul`
   list-style: none;
   grid-column: 2 / 3;
   display: flex;
   justify-content: space-around;
+
+  & > li {
+    font-size: 1.2rem;
+    & > a {
+      color: ${props => props.theme.palette.text.light1};
+    }
+  }
+  & > li:hover {
+    & > a {
+      color: ${props => props.theme.palette.text.light2};
+    }
+  }
 
   @media ${props => props.theme.breakpoints.tablet} {
     display: none;
@@ -111,15 +125,12 @@ export const DrawerWrapper = styled.div`
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
 
-  /* &.open {
-    transform: translateX(0%);
-    transition: transform 250ms ease-in-out;
-  } */
-
   @media ${props => props.theme.breakpoints.tablet} {
     display: flex;
+    align-items: center;
+    justify-content: center;
     &.open {
-      transform: translateX(50%);
+      transform: translateX(60%);
       transition: transform 250ms ease-in-out;
     }
   }
@@ -130,6 +141,37 @@ export const DrawerWrapper = styled.div`
       transform: translateX(0%);
       transition: transform 250ms ease-in-out;
     }
+  }
+`
+
+// Nav links wrapper for mobile version
+export const DrawerLinksWrapper = styled.ul`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+  height: 50%;
+
+  & > li {
+    font-size: 1.3rem;
+    & > a {
+      color: ${props => props.theme.palette.text.light1};
+    }
+  }
+  & > li:hover {
+    & > a {
+      color: ${props => props.theme.palette.text.light2};
+    }
+  }
+
+  @media ${props => props.theme.breakpoints.tablet} {
+    right: 30%;
+  }
+
+  @media ${props => props.theme.breakpoints.mobile} {
+    right: 0%;
   }
 `
 
@@ -144,7 +186,7 @@ export const CloseMenuWrapper = styled.div`
   }
 
   @media ${props => props.theme.breakpoints.tablet} {
-    right: 55%;
+    right: 65%;
   }
 
   @media ${props => props.theme.breakpoints.mobile} {
