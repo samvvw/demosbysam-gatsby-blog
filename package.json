@@ -3,7 +3,7 @@
   "private": true,
   "description": "Personal portfolio website, created using Gatsby.",
   "version": "0.1.0",
-  "author": "@demosbySam <svwarren90@gmail.com>",
+  "author": "@demosbysam <demosbysam@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^4.11.2",
     "@material-ui/icons": "^4.11.2",

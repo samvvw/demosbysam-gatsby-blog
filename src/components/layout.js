@@ -8,7 +8,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { GridWrapper, FooterWrapper, MainWrapper } from "../elements"
+import {
+  GridWrapper,
+  FooterWrapper,
+  MainWrapper,
+  FooterContent,
+} from "../elements"
 import Nav from "./nav"
 
 const Layout = ({ children }) => {
@@ -34,7 +39,7 @@ const Layout = ({ children }) => {
       />
       <MainWrapper>{children}</MainWrapper>
       <FooterWrapper style={{ color: "white" }}>
-        © {new Date().getFullYear()}, SamVW
+        <FooterContent>© {new Date().getFullYear()}, SamVW</FooterContent>
       </FooterWrapper>
     </GridWrapper>
   )

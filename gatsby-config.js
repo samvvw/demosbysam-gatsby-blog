@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `Demos by Sam`,
     description: `Coding demos website, created using Gatsby.`,
-    author: `@demosbySam`,
+    author: `@demosbysam`,
     navLinks: {
       en: ["Home", "About", "Projects", "Blog", "Contact"],
       es: ["Inicio", "Sobre nosotros", "Proyectos", "Blog", "Contacto"],
