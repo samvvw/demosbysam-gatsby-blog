@@ -8,7 +8,7 @@ import Img from "gatsby-image"
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Inicio" />
     <h1>Under Construction...</h1>
     <div style={{ maxWidth: `30px`, marginBottom: `1.45rem` }}>
       <Image />

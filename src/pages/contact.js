@@ -4,15 +4,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "../components/image"
 
-const Contact = ({ location }) => {
-  const capitalizeFirstLetter = str => {
-    return str.charAt(0).toUpperCase() + str.slice(1)
-  }
+const Contact = () => {
   return (
     <Layout>
-      <SEO
-        title={capitalizeFirstLetter(location.pathname.replace(/[/]/g, ""))}
-      />
+      <SEO title="Contacto" />
       <br />
       <br />
       <h1>Contact Page</h1>

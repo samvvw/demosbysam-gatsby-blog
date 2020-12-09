@@ -38,6 +38,23 @@ export const NavWrapper = styled.nav`
   }
 `
 
+export const LogoWrapper = styled(props => <Link {...props} />)`
+  color: ${props => props.theme.palette.text.light1};
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 300px;
+
+  & > div {
+    min-width: 80px;
+    margin-right: 1rem;
+  }
+  & > h1 {
+    margin: 0 1rem;
+  }
+`
+
 // Nav links wrapper for desktop version
 
 export const ListWrapper = styled.ul`
@@ -77,22 +94,6 @@ const NavList = props => {
 export const NavLink = styled(props => <NavList {...props} />)`
   text-decoration: none;
   color: white;
-`
-
-export const ButtonWrapper = styled(props => <Link {...props} />)`
-  padding: 0.5rem 0.75rem;
-  background-color: ${props => props.theme.colors.main1};
-  border-radius: 0.5rem;
-  color: ${props => props.theme.colors.light1};
-  font-weight: 700;
-  font-size: 0.875rem;
-  width: fit-content;
-  transition: filter 0.3s ease;
-  text-decoration: none;
-  &:hover,
-  &:focus {
-    filter: brightness(110%);
-  }
 `
 
 export const MenuWrapper = styled.div`
