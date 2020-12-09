@@ -9,19 +9,25 @@ import Img from "gatsby-image"
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Inicio" />
-    <h1>Under Construction...</h1>
-    <div style={{ maxWidth: `30px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div
+      style={{
+        gridColumn: "2 / 14",
+      }}
+    >
+      <h1>Under Construction...</h1>
+      <div style={{ maxWidth: `30px`, marginBottom: `1.45rem` }}>
+        <Image />
+      </div>
+      <h1 style={{ margin: "2rem 0" }}>
+        {data.allContentfulHomePage.edges[0].node.heroImage.title}
+      </h1>
+      <Img
+        style={{ maxWidth: "400px", marginBottom: "2rem" }}
+        fluid={data.allContentfulHomePage.edges[0].node.heroImage.fluid}
+      />
+      <Link to="/page-2/">Go to page 2</Link> <br />
+      <Link to="/contact/">Contact</Link>
     </div>
-    <h1 style={{ margin: "2rem 0" }}>
-      {data.allContentfulHomePage.edges[0].node.heroImage.title}
-    </h1>
-    <Img
-      style={{ maxWidth: "400px", marginBottom: "2rem" }}
-      fluid={data.allContentfulHomePage.edges[0].node.heroImage.fluid}
-    />
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/contact/">Contact</Link>
   </Layout>
 )
 

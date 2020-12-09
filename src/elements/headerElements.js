@@ -44,14 +44,26 @@ export const LogoWrapper = styled(props => <Link {...props} />)`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  min-width: 300px;
+  max-width: 305px;
+  min-width: 260px;
+  /* border: red solid 1px; */
 
   & > div {
     min-width: 80px;
     margin-right: 1rem;
   }
   & > h1 {
-    margin: 0 1rem;
+    margin-left: 1rem;
+  }
+
+  @media ${props => props.theme.breakpoints.mobile} {
+    & > div {
+      min-width: 75px;
+      margin-right: 0.4rem;
+    }
+    & > h1 {
+      margin-left: 0.4rem;
+    }
   }
 `
 

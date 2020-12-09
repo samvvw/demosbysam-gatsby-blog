@@ -60,7 +60,7 @@ const Nav = ({ siteTitle, navLinks }) => {
         </LogoWrapper>
         <ListWrapper style={{ listStyle: "none" }}>{navArr()}</ListWrapper>
         <MenuWrapper>
-          <MenuIcon onClick={useDrawer} />
+          <MenuIcon onClick={useDrawer} fontSize="large" />
         </MenuWrapper>
       </NavWrapper>
       <DrawerWrapper className={`${drawer.drawer}`}>
