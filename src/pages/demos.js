@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Image from "../components/image"
 
-const Contact = () => {
+const Demos = () => {
   return (
     <Layout>
       <div
@@ -12,10 +12,10 @@ const Contact = () => {
           gridColumn: "2 / 14",
         }}
       >
-        <SEO title="Contacto" />
+        <SEO title="Demos" />
         <br />
         <br />
-        <h1>Contact Page</h1>
+        <h1>Demos Page</h1>
         <br />
         <br />
         <p>Page under construction...</p>
@@ -31,4 +31,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Demos

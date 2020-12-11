@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState } from "react"
 import {
@@ -9,6 +8,8 @@ import {
   MenuWrapper,
   DrawerWrapper,
   CloseMenuWrapper,
+  DrawerLinksWrapper,
+  LogoWrapper,
 } from "../elements"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -16,7 +17,7 @@ import Img from "gatsby-image"
 import MenuIcon from "@material-ui/icons/Menu"
 import CloseIcon from "@material-ui/icons/Close"
 
-const Nav = ({ siteTitle, language, navLinks }) => {
+const Nav = ({ siteTitle, navLinks }) => {
   const [drawer, setDrawer] = useState({ drawer: "" })
   const data = useStaticQuery(graphql`
     query {
@@ -31,10 +32,14 @@ const Nav = ({ siteTitle, language, navLinks }) => {
   `)
 
   const navArr = () => {
-    return navLinks.en.map(el => (
+    return navLinks.es.map((el, i) => (
       <NavLink
         key={el}
-        to={`/${el !== "Home" ? el.toLowerCase().split(" ").join("-") : ""}`}
+        to={`/${
+          navLinks.en[i] !== "Home"
+            ? navLinks.en[i].toLowerCase().split(" ").join("-")
+            : ""
+        }`}
       >
         {el}
       </NavLink>
@@ -49,43 +54,17 @@ const Nav = ({ siteTitle, language, navLinks }) => {
   return (
     <HeaderWrapper>
       <NavWrapper>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "flex-start",
-            minWidth: "300px",
-          }}
-        >
-          {/* <div style={{ minWidth: `100px` }}> */}
-          <Img
-            fluid={data.placeholderImage.childImageSharp.fluid}
-            style={{
-              minWidth: `80px`,
-              marginRight: "1rem",
-            }}
-          />
-          {/* </div> */}
-          <h1
-            style={{
-              margin: "0 1rem",
-            }}
-          >
-            {siteTitle}
-          </h1>
-          <code>{language}</code>
-        </Link>
-        <ListWrapper style={{ listStyle: "none" }}>
-          {navArr(language)}
-        </ListWrapper>
+        <LogoWrapper to="/">
+          <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+          <h1>{siteTitle}</h1>
+        </LogoWrapper>
+        <ListWrapper style={{ listStyle: "none" }}>{navArr()}</ListWrapper>
         <MenuWrapper>
-          <MenuIcon onClick={useDrawer} />
+          <MenuIcon onClick={useDrawer} fontSize="large" />
         </MenuWrapper>
       </NavWrapper>
       <DrawerWrapper className={`${drawer.drawer}`}>
+        <DrawerLinksWrapper>{navArr()}</DrawerLinksWrapper>
         <CloseMenuWrapper>
           <CloseIcon onClick={useDrawer} fontSize="large" />
         </CloseMenuWrapper>

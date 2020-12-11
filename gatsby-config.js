@@ -6,10 +6,10 @@ module.exports = {
   siteMetadata: {
     title: `Demos by Sam`,
     description: `Coding demos website, created using Gatsby.`,
-    author: `@SamVVW`,
+    author: `@demosbysam`,
     navLinks: {
-      en: ["Home", "About", "Projects", "Blog", "Contact"],
-      es: ["Inicio", "Sobre nosotros", "Proyectos", "Blog", "Contacto"],
+      en: ["Home", "About", "Demos", "Blog", "Contact"],
+      es: ["Inicio", "Sobre nosotros", "Demos", "Blog", "Contacto"],
     },
   },
   plugins: [
@@ -26,19 +26,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `DemosBySam`,
+        short_name: `DemosBySam`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/drawing_svg.png`, // This path is relative to the root of the site.
-      },
-    },
-    {
-      resolve: `gatsby-plugin-styled-components`,
-      options: {
-        displayName: false,
       },
     },
     {
@@ -49,12 +43,20 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: false,
+      },
+    },
+    // "gatsby-transformer-remark",
+    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.SPACE_ID,
         accessToken: process.env.ACCESS_TOKEN,
       },
     },
+    "gatsby-plugin-mdx",
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
