@@ -81,4 +81,4 @@ Nav.defaultProps = {
   siteTitle: ``,
 }
 
-export default Nav
+export { Nav }

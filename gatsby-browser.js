@@ -1,6 +1,11 @@
 import React from "react"
 import { createGlobalStyle, ThemeProvider } from "styled-components"
 import Theme from "./src/theme/theme"
+import { MDXProvider } from "@mdx-js/react"
+import { Table } from "./src/components/Table"
+import { preToCodeBlock } from "mdx-utils"
+import "./language-tabs.css"
+import { Code } from "./src/components/Code"
 
 const GlobalSyles = createGlobalStyle`
   * {
@@ -17,9 +22,23 @@ const GlobalSyles = createGlobalStyle`
   }
 `
 
+const components = {
+  table: Table,
+  pre: preProps => {
+    const props = preToCodeBlock(preProps)
+    if (props) {
+      return <Code {...props} />
+    }
+    return <pre {...preProps} />
+  },
+  wrapper: ({ children }) => <>{children}</>,
+}
+
 export const wrapRootElement = ({ element }) => (
-  <ThemeProvider theme={Theme}>
-    <GlobalSyles />
-    {element}
-  </ThemeProvider>
+  <MDXProvider components={components}>
+    <ThemeProvider theme={Theme}>
+      <GlobalSyles />
+      {element}
+    </ThemeProvider>
+  </MDXProvider>
 )
