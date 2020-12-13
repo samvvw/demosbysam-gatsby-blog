@@ -10,7 +10,7 @@ export const GridWrapper = styled.div`
   background-color: ${props => props.theme.palette.surface.light2};
 
   @media ${props => props.theme.breakpoints.tablet} {
-    grid-template-columns: 2rem repeat(6, 1fr) 2rem;
+    grid-template-columns: 1rem repeat(6, 1fr) 1rem;
     grid-gap: 0 1rem;
   }
 

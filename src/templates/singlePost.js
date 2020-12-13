@@ -1,13 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import {Layout, SEO, Post} from "../components"
+import { Layout, SEO, Post } from "../components"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { H1 } from "../elements"
 
 const singlePost = ({ data }) => {
   return (
-    <Layout>
+    <Layout title={data.contentfulBlogPost.title}>
       <SEO />
       {/* {<pre>{JSON.stringify(data.contentfulBlogPost, null, 2)}</pre>} */}
       <Post>

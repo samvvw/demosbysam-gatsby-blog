@@ -8,15 +8,17 @@ export const MainWrapper = styled.main`
   grid-template-columns: 1fr repeat(12, minmax(auto, 4.2rem)) 1fr;
   grid-template-rows: auto;
   gap: 0 2rem;
+  /* border: red solid 3px; */
 
   @media ${props => props.theme.breakpoints.tablet} {
-    grid-template-columns: 2rem repeat(6, 1fr) 2rem;
+    grid-template-columns: 1rem repeat(6, 1fr) 1rem;
     grid-gap: 0 1rem;
-    grid-column: 2 / span 6;
+    grid-column: 1 / 9;
   }
 
   @media ${props => props.theme.breakpoints.mobile} {
     grid-template-columns: 1rem repeat(6, 1fr) 1rem;
-    grid-column: 2 / span 6;
+
+    grid-column: 1 / 9;
   }
 `

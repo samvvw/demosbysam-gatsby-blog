@@ -8,6 +8,7 @@ export const PostWrapper = styled.article`
     `${props.theme.spacings.xLarge} ${props.theme.spacings.xxLarge}`};
   box-shadow: ${props => props.theme.shadows.shadow1};
   z-index: 10;
+
   img {
     max-width: 80%;
   }
@@ -15,6 +16,7 @@ export const PostWrapper = styled.article`
   h1,
   h2,
   h3,
+  h4,
   h5,
   h6 {
     color: ${props => props.theme.palette.text.dark2};
