@@ -33,4 +33,6 @@ const Image = () => {
   return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
 }
 
+
 export { Image }
+

@@ -16,6 +16,7 @@ import {
 } from "../elements"
 import {Nav} from "./"
 
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -50,3 +51,4 @@ Layout.propTypes = {
 }
 
 export { Layout }
+

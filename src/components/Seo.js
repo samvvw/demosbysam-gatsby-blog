@@ -86,4 +86,6 @@ SEO.propTypes = {
   title: PropTypes.string.isRequired,
 }
 
+
 export { SEO }
+
