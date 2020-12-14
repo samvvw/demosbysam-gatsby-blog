@@ -15,14 +15,17 @@ const allPosts = ({ pageContext, data }) => {
         {/* <pre>{JSON.stringify(pageContext, null, 2)}</pre> */}
         {posts.map(post => (
           <PostCard key={post.node.title}>
-            <div>
+            <div style={{ flexGrow: "1" }}>
               <Link to={`/blog/${post.node.slug}`}>
                 <H1 color="dark2" weight="bold">
                   {post.node.title}
                 </H1>
               </Link>
               <P>{post.node.publishDate}</P>
-              <P color="dark2">{post.node.description.description}</P>
+              <P color="dark2">
+                {post.node.description.description}
+                <Link to={`/blog/${post.node.slug}`}> read more...</Link>
+              </P>
             </div>
             <Img
               fluid={post.node.heroImage.fluid}

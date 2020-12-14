@@ -156,6 +156,35 @@ export const DrawerWrapper = styled.div`
     }
   }
 `
+export const DrawerBackdrop = styled.div`
+  display: none;
+  position: fixed;
+  background-color: ${props => props.theme.palette.surface.dark2};
+  height: 100%;
+  width: 100%;
+  transform: translate(-100%);
+  transition: transform 250ms ease-in-out;
+  cursor: pointer;
+  opacity: 0.4;
+
+  @media ${props => props.theme.breakpoints.tablet} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.open {
+      transform: translateX(-40%);
+      transition: transform 250ms ease-in-out;
+    }
+  }
+
+  @media ${props => props.theme.breakpoints.mobile} {
+    display: none;
+    &.open {
+      transform: translateX(0%);
+      transition: transform 250ms ease-in-out;
+    }
+  }
+`
 
 // Nav links wrapper for mobile version
 export const DrawerLinksWrapper = styled.ul`

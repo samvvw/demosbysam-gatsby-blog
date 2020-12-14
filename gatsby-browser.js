@@ -11,7 +11,7 @@ const GlobalSyles = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    ${"" /* border: red solid 1px !important; */}
+    ${"" /* border: red solid 1px !important;  */}
   }
   body,
   html {
