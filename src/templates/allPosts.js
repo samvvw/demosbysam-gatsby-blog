@@ -13,9 +13,9 @@ const allPosts = ({ pageContext, data }) => {
         <pre>{JSON.stringify(pageContext, null, 2)}</pre>
         {posts.map(post => (
           <PostCard>
-            <H1>{post.node.title}</H1>
+            <H1 color="dark2" weight="bold">{post.node.title}</H1>
             <P>{post.node.publishDate}</P>
-            <P>{post.node.description.description}</P>
+            <P color="dark2">{post.node.description.description}</P>
           </PostCard>
         ))}
       </AllPostsContainer>
