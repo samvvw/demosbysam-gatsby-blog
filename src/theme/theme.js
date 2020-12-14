@@ -41,8 +41,8 @@ export default {
     text: {
       light1: "#fff",
       light2: "rgba(255, 255, 255, 0.7)",
-      dark1: "rgba(0, 0, 0, 0.87)",
-      dark2: "rgba(0, 0, 0, 0.54)",
+      dark1: "rgba(0, 0, 0, 0.54)",
+      dark2: "rgba(0, 0, 0, 0.87)",
     },
     surface: {
       light1: "#fff",

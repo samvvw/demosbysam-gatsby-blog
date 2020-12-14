@@ -7,6 +7,7 @@ import {
   ListWrapper,
   MenuWrapper,
   DrawerWrapper,
+  DrawerBackdrop,
   CloseMenuWrapper,
   DrawerLinksWrapper,
   LogoWrapper,
@@ -63,6 +64,7 @@ const Nav = ({ siteTitle, navLinks }) => {
           <MenuIcon onClick={useDrawer} fontSize="large" />
         </MenuWrapper>
       </NavWrapper>
+      <DrawerBackdrop className={`${drawer.drawer}`} onClick={useDrawer} />
       <DrawerWrapper className={`${drawer.drawer}`}>
         <DrawerLinksWrapper>{navArr()}</DrawerLinksWrapper>
         <CloseMenuWrapper>
@@ -81,4 +83,6 @@ Nav.defaultProps = {
   siteTitle: ``,
 }
 
-export default Nav
+
+export { Nav }
+

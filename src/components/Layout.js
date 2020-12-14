@@ -14,7 +14,8 @@ import {
   MainWrapper,
   FooterContent,
 } from "../elements"
-import Nav from "./nav"
+import {Nav} from "./"
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -49,4 +50,5 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export { Layout }
+

@@ -22,7 +22,7 @@ exports.createPages = async function ({ actions, graphql }) {
 
   Array.from({ length: numPages }).forEach((_, i) => {
     actions.createPage({
-      path: i === 0 ? `blog/1` : `blog/${i + 1}`,
+      path: i === 0 ? `blog` : `blog/${i + 1}`,
       component: require.resolve("./src/templates/allPosts.js"),
       context: {
         limit: postPerPage,

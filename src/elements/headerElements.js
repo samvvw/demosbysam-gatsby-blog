@@ -33,7 +33,7 @@ export const NavWrapper = styled.nav`
     grid-column: 2 / span 6;
   }
 
-  @media ${props => props.theme.breakpoints.tablet} {
+  @media ${props => props.theme.breakpoints.mobile} {
     grid-column: 2 / span 6;
   }
 `
@@ -150,6 +150,35 @@ export const DrawerWrapper = styled.div`
 
   @media ${props => props.theme.breakpoints.mobile} {
     display: flex;
+    &.open {
+      transform: translateX(0%);
+      transition: transform 250ms ease-in-out;
+    }
+  }
+`
+export const DrawerBackdrop = styled.div`
+  display: none;
+  position: fixed;
+  background-color: ${props => props.theme.palette.surface.dark2};
+  height: 100%;
+  width: 100%;
+  transform: translate(-100%);
+  transition: transform 250ms ease-in-out;
+  cursor: pointer;
+  opacity: 0.4;
+
+  @media ${props => props.theme.breakpoints.tablet} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.open {
+      transform: translateX(-40%);
+      transition: transform 250ms ease-in-out;
+    }
+  }
+
+  @media ${props => props.theme.breakpoints.mobile} {
+    display: none;
     &.open {
       transform: translateX(0%);
       transition: transform 250ms ease-in-out;
