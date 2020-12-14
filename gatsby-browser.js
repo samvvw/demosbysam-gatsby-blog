@@ -2,10 +2,9 @@ import React from "react"
 import { createGlobalStyle, ThemeProvider } from "styled-components"
 import Theme from "./src/theme/theme"
 import { MDXProvider } from "@mdx-js/react"
-import { Table } from "./src/components/Table"
+import { Table, Code } from "./src/components"
 import { preToCodeBlock } from "mdx-utils"
 import "./language-tabs.css"
-import { Code } from "./src/components/Code"
 
 const GlobalSyles = createGlobalStyle`
   * {

@@ -1,6 +1,10 @@
 import React from "react"
 import { createGlobalStyle, ThemeProvider } from "styled-components"
 import Theme from "./src/theme/theme"
+import { MDXProvider } from "@mdx-js/react"
+import { Table, Code } from "./src/components"
+import { preToCodeBlock } from "mdx-utils"
+import "./language-tabs.css"
 
 const GlobalSyles = createGlobalStyle`
   * {
@@ -13,13 +17,27 @@ const GlobalSyles = createGlobalStyle`
   html {
     font-family: ${props => props.theme.fonts.main};
     height: 100%;
-    background-color: ${props => props.theme.palette.surface.light2};
+    background-color: ${props => props.theme.palette.surface.light1};
   }
 `
 
+const components = {
+  table: Table,
+  pre: preProps => {
+    const props = preToCodeBlock(preProps)
+    if (props) {
+      return <Code {...props} />
+    }
+    return <pre {...preProps} />
+  },
+  wrapper: ({ children }) => <>{children}</>,
+}
+
 export const wrapRootElement = ({ element }) => (
-  <ThemeProvider theme={Theme}>
-    <GlobalSyles />
-    {element}
-  </ThemeProvider>
+  <MDXProvider components={components}>
+    <ThemeProvider theme={Theme}>
+      <GlobalSyles />
+      {element}
+    </ThemeProvider>
+  </MDXProvider>
 )

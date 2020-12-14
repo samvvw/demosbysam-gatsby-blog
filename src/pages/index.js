@@ -4,6 +4,7 @@ import { graphql, Link } from "gatsby"
 import { Layout, SEO } from "../components"
 import Img from "gatsby-image"
 
+
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Inicio" />
