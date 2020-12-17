@@ -2,13 +2,13 @@ import styled from "styled-components"
 
 export const PostWrapper = styled.article`
   grid-column: 2 / 14;
-  grid-row: 3 / span 5;
   background-color: ${props => props.theme.palette.surface.light2};
   padding: ${props =>
     `${props.theme.spacings.xLarge} ${props.theme.spacings.xxLarge}`};
   box-shadow: ${props => props.theme.shadows.shadow1};
   z-index: 10;
   margin-top: 12rem;
+  overflow: scroll;
 
   img {
     max-width: 80%;
@@ -138,8 +138,8 @@ export const PostWrapper = styled.article`
   }
 
   @media ${props => props.theme.breakpoints.tablet} {
-    grid-column: 2 / span 6;
+    grid-column: 1 / span 8;
     padding: ${props =>
-      `${props.theme.spacings.medium} ${props.theme.spacings.large}`};
+      `${props.theme.spacings.medium} ${props.theme.spacings.medium}`};
   }
 `

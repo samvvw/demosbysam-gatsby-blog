@@ -12,7 +12,7 @@ export const FooterWrapper = styled.footer`
   @media ${props => props.theme.breakpoints.tablet} {
     grid-template-columns: 2rem repeat(6, 1fr) 2rem;
     grid-gap: 0 1rem;
-    grid-column: 1 / span;
+    grid-column: 1 / span 8;
   }
 
   @media ${props => props.theme.breakpoints.mobile} {

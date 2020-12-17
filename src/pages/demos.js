@@ -1,14 +1,12 @@
 import React from "react"
 
-import { Layout, SEO, Image } from "../components"
+import { Layout, SEO, Image, Container } from "../components"
 
 const Demos = () => {
   return (
     <Layout>
-      <div
-        style={{
-          gridColumn: "2 / 14",
-        }}
+      <Container
+        flexDirection="column" justifyContent="space-around"
       >
         <SEO title="Demos" />
         <br />
@@ -24,7 +22,7 @@ const Demos = () => {
         </div>
         <br />
         <br />
-      </div>
+      </Container>
     </Layout>
   )
 }
