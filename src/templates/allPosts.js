@@ -15,22 +15,22 @@ const allPosts = ({ pageContext, data }) => {
         {/* <pre>{JSON.stringify(pageContext, null, 2)}</pre> */}
         {posts.map(post => (
           <PostCard key={post.node.title}>
-            <div style={{ flexGrow: "1" }}>
-              <Link to={`/blog/${post.node.slug}`}>
-                <H1 color="dark2" weight="bold">
-                  {post.node.title}
-                </H1>
-              </Link>
-              <P>{post.node.publishDate}</P>
-              <P color="dark2">
-                {post.node.description.description}
-                <Link to={`/blog/${post.node.slug}`}> read more...</Link>
-              </P>
-            </div>
+            <Link to={`/blog/${post.node.slug}`}>
+              <H1 color="dark2" weight="bold">
+                {post.node.title}
+              </H1>
+            </Link>
             <Img
               fluid={post.node.heroImage.fluid}
               style={{ minWidth: "250px", maxWidth: "300px" }}
             />
+            <div style={{ flexGrow: "1" }}>
+              <P>{post.node.publishDate}</P>
+              <P color="dark2">
+                {post.node.description.description}
+                <Link to={`/blog/${post.node.slug}`}>read more...</Link>
+              </P>
+            </div>
           </PostCard>
         ))}
         {currentPage !== 1 ? (

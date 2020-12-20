@@ -1,11 +1,14 @@
 .gatsby-highlight {
   position: relative;
+  overflow: scroll;
   -webkit-overflow-scrolling: touch;
 }
 .gatsby-highlight pre[class*="language-"] {
   -webkit-overflow-scrolling: touch;
   padding: 1rem 0.75rem;
   border-radius: 0.25rem;
+  width: fit-content;
+  min-width: 100%;
 }
 .gatsby-highlight pre[class*="language-"]::before {
   background: black;
@@ -15,7 +18,7 @@
   letter-spacing: 0.025rem;
   padding: 0.1rem 0.5rem;
   position: absolute;
-  right: 1rem;
+  left: 1rem;
   text-align: right;
   text-transform: uppercase;
   top: 0;

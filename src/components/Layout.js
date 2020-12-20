@@ -8,14 +8,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import {
-  GridWrapper,
-  FooterWrapper,
-  MainWrapper,
-  FooterContent,
-} from "../elements"
-import {Nav} from "./"
-
+import { GridWrapper, MainWrapper } from "../elements"
+import { Nav, Footer } from "./"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -39,9 +33,10 @@ const Layout = ({ children }) => {
         navLinks={data.site.siteMetadata.navLinks}
       />
       <MainWrapper>{children}</MainWrapper>
-      <FooterWrapper style={{ color: "white" }}>
-        <FooterContent>© {new Date().getFullYear()}, SamVW</FooterContent>
-      </FooterWrapper>
+      <Footer
+        siteTitle={data.site.siteMetadata?.title || `Title`}
+        navLinks={data.site.siteMetadata.navLinks}
+      />
     </GridWrapper>
   )
 }
@@ -51,4 +46,3 @@ Layout.propTypes = {
 }
 
 export { Layout }
-
