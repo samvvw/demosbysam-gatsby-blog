@@ -8,7 +8,6 @@ export const PostWrapper = styled.article`
   box-shadow: ${props => props.theme.shadows.shadow1};
   z-index: 10;
   margin-top: 12rem;
-  overflow: scroll;
 
   img {
     max-width: 80%;
@@ -139,7 +138,6 @@ export const PostWrapper = styled.article`
 
   @media ${props => props.theme.breakpoints.tablet} {
     grid-column: 1 / span 8;
-    padding: ${props =>
-      `${props.theme.spacings.medium} ${props.theme.spacings.medium}`};
+    padding: ${props => `${props.theme.spacings.medium} 0`};
   }
 `
