@@ -1,6 +1,6 @@
 .gatsby-highlight {
   position: relative;
-  overflow: scroll;
+  overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
 .gatsby-highlight pre[class*="language-"] {
