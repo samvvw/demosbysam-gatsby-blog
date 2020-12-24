@@ -5,6 +5,8 @@ import { MDXProvider } from "@mdx-js/react"
 import { Table, Code } from "./src/components"
 import { preToCodeBlock } from "mdx-utils"
 import "./language-tabs.css"
+import "fontsource-muli"
+import "fontsource-roboto-mono"
 
 const GlobalSyles = createGlobalStyle`
   * {

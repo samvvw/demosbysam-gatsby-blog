@@ -24,8 +24,8 @@ const IndexPage = ({ data }) => (
         {data.allContentfulHomePage.edges[0].node.heroImage.title}
       </h1>
       <Img
-        style={{ minWidth: "360px", marginBottom: "2rem" }}
-        fluid={data.allContentfulHomePage.edges[0].node.heroImage.fluid}
+        style={{ minWidth: "360px", height: "360px", marginBottom: "2rem" }}
+        fluid={data.placeholderImage.childImageSharp.fluid}
       />
       <Link to="/page-2/">Go to page 2</Link> <br />
       <Link to="/contact/">Contact</Link>
@@ -42,10 +42,14 @@ export const pageQuery = graphql`
         node {
           heroImage {
             title
-            fluid(maxWidth: 600, maxHeight: 500) {
-              ...GatsbyContentfulFluid
-            }
           }
+        }
+      }
+    }
+    placeholderImage: file(relativePath: { eq: "IMG_8384.jpeg" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

@@ -5,13 +5,15 @@ import { MDXProvider } from "@mdx-js/react"
 import { Table, Code } from "./src/components"
 import { preToCodeBlock } from "mdx-utils"
 import "./language-tabs.css"
+import "fontsource-muli"
+import "fontsource-roboto-mono"
 
 const GlobalSyles = createGlobalStyle`
   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    ${"" /* border: red solid 1px !important; */}
+    ${"" /* border: red solid 1px !important;  */}
   }
   body,
   html {

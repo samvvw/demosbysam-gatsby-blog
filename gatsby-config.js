@@ -35,13 +35,13 @@ module.exports = {
         icon: `src/images/drawing_svg.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`roboto mono`, `muli\:400,400i,700,700i`],
-        display: `swap`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-fonts`,
+    //   options: {
+    //     fonts: [`roboto mono`, `muli\:400,400i,700,700i`],
+    //     display: `swap`,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
