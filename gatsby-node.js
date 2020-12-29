@@ -5,14 +5,22 @@ exports.createPages = async function ({ actions, graphql }) {
         edges {
           node {
             slug
-            publishDate
+            title
+          }
+        }
+      }
+      allContentfulDemos(sort: { fields: creationDate, order: DESC }) {
+        edges {
+          node {
+            slug
             title
           }
         }
       }
     }
   `)
-  // Create paginater pages for posts
+
+  // Create paginated pages for posts
 
   const postPerPage = 3
 
@@ -40,6 +48,18 @@ exports.createPages = async function ({ actions, graphql }) {
     actions.createPage({
       path: `blog/${slug}`,
       component: require.resolve("./src/templates/singlePost.js"),
+      context: { slug },
+    })
+  })
+
+  // Create page for each demo
+
+  data.allContentfulDemos.edges.forEach(edge => {
+    const slug = edge.node.slug
+
+    actions.createPage({
+      path: `demos/${slug}`,
+      component: require.resolve("./src/templates/singleDemo.js"),
       context: { slug },
     })
   })
