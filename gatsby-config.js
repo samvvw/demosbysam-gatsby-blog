@@ -8,8 +8,8 @@ module.exports = {
     description: `Coding demos website, created using Gatsby.`,
     author: `@demosbysam`,
     navLinks: {
-      en: ["Home", "About", "Demos", "Blog", "Contact"],
-      es: ["Inicio", "Sobre nosotros", "Demos", "Blog", "Contacto"],
+      en: ["Home", "Demos", "Blog", "About", "Contact"],
+      es: ["Inicio", "Demos", "Blog", "Sobre nosotros", "Contacto"],
     },
   },
   plugins: [

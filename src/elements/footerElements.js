@@ -73,6 +73,9 @@ export const FooterLink = styled(props => <FooterList {...props} />)`
 export const SocialMediaWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-
   padding: 0.75rem;
+
+  & > * {
+    margin: 0 0.5rem;
+  }
 `

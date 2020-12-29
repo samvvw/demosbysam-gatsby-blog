@@ -6,7 +6,7 @@ import {
   FooterListWrapper,
   SocialMediaWrapper,
 } from "../elements"
-import { Twitter } from "@material-ui/icons"
+import { Twitter, GitHub } from "@material-ui/icons"
 
 const Footer = ({ siteTitle, navLinks }) => {
   const footerArr = () => {
@@ -28,6 +28,7 @@ const Footer = ({ siteTitle, navLinks }) => {
       <FooterContent>
         <FooterListWrapper>{footerArr()}</FooterListWrapper>
         <SocialMediaWrapper>
+          <GitHub fontSize="large" />
           <Twitter fontSize="large" />
         </SocialMediaWrapper>
         <h6 style={{ position: "absolute", right: "2%", bottom: "2%" }}>
