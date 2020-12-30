@@ -1,12 +1,16 @@
 import React from "react"
-import { HeroWrapper } from "../elements"
+import { HeroWrapper, TechLogosWrapper } from "../elements"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
-import CSS from "../images/CSS3_logo_and_wordmark.svg"
-import HTML from "../images/HTML5_Logo.svg"
-import JS from "../images/javascript.svg"
-import SVG from "../images/1logo.svg"
-import SVG2 from "../images/logo.svg"
+import CSSLOGO from "../images/css3.svg"
+import HTMLLOGO from "../images/html-logo.svg"
+import JSLOGO from "../images/js-logo.svg"
+import BASHLOGO from "../images/bash-logo.svg"
+import GITLOGO from "../images/git-logo.svg"
+import NODEJSLOGO from "../images/nodejs-logo.svg"
+import NPMLOGO from "../images/npm-logo.svg"
+import REACTLOGO from "../images/react-logo.svg"
+import VSCODELOGO from "../images/vscode-logo.svg"
 
 const HeroBanner = () => {
   const data = useStaticQuery(graphql`
@@ -24,17 +28,19 @@ const HeroBanner = () => {
     <HeroWrapper>
       <Img
         fluid={data.placeholderImage.childImageSharp.fluid}
-        style={{ height: "25rem" }}
+        style={{ height: "20rem" }}
       />
-      <div
-        style={{ display: "flex", border: "red solid 1px", height: "18rem" }}
-      >
-        <img src={CSS} alt="" />
-        <img src={HTML} alt="" />
-        <img src={JS} alt="" />
-        <img src={SVG} alt="" />
-        <img src={SVG2} alt="" />
-      </div>
+      <TechLogosWrapper>
+        <img src={CSSLOGO} alt="" />
+        <img src={HTMLLOGO} alt="" />
+        <img src={JSLOGO} alt="" />
+        <img src={BASHLOGO} alt="" />
+        <img src={GITLOGO} alt="" />
+        <img src={NODEJSLOGO} alt="" />
+        <img src={NPMLOGO} alt="" />
+        <img src={REACTLOGO} alt="" />
+        <img src={VSCODELOGO} alt="" />
+      </TechLogosWrapper>
     </HeroWrapper>
   )
 }

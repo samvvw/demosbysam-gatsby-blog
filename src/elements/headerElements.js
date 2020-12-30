@@ -48,8 +48,8 @@ export const LogoWrapper = styled(props => <Link {...props} />)`
   min-width: 260px;
   /* border: red solid 1px; */
 
-  & > div {
-    min-width: 80px;
+  & > img {
+    width: 90px;
     margin-right: 1rem;
   }
   & > h1 {
@@ -57,8 +57,8 @@ export const LogoWrapper = styled(props => <Link {...props} />)`
   }
 
   @media ${props => props.theme.breakpoints.mobile} {
-    & > div {
-      min-width: 75px;
+    & > img {
+      width: 80px;
       margin-right: 0.4rem;
     }
     & > h1 {
