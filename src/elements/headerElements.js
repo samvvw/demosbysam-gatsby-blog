@@ -46,7 +46,6 @@ export const LogoWrapper = styled(props => <Link {...props} />)`
   justify-content: flex-start;
   max-width: 305px;
   min-width: 260px;
-  /* border: red solid 1px; */
 
   & > img {
     width: 90px;

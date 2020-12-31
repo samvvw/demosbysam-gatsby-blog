@@ -17,7 +17,7 @@ const HeroBanner = () => {
     query {
       placeholderImage: file(relativePath: { eq: "under-construction.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 900) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -31,8 +31,8 @@ const HeroBanner = () => {
         style={{ height: "20rem" }}
       />
       <TechLogosWrapper>
-        <img src={CSSLOGO} alt="" />
         <img src={HTMLLOGO} alt="" />
+        <img src={CSSLOGO} alt="" />
         <img src={JSLOGO} alt="" />
         <img src={BASHLOGO} alt="" />
         <img src={GITLOGO} alt="" />
