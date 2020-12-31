@@ -11,6 +11,7 @@ import NODEJSLOGO from "../images/nodejs-logo.svg"
 import NPMLOGO from "../images/npm-logo.svg"
 import REACTLOGO from "../images/react-logo.svg"
 import VSCODELOGO from "../images/vscode-logo.svg"
+import GATSBYLOGO from "../images/gatsby-logo.svg"
 
 const HeroBanner = () => {
   const data = useStaticQuery(graphql`
@@ -39,6 +40,7 @@ const HeroBanner = () => {
         <img src={NODEJSLOGO} alt="" />
         <img src={NPMLOGO} alt="" />
         <img src={REACTLOGO} alt="" />
+        <img src={GATSBYLOGO} alt="" />
         <img src={VSCODELOGO} alt="" />
       </TechLogosWrapper>
     </HeroWrapper>
