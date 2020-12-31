@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import { Layout, SEO, Demo } from "../components"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { H1 } from "../elements"
+import { H1 } from "../styles"
 
 import "../../language-tabs.css"
 import { MDXProvider } from "@mdx-js/react"

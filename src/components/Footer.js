@@ -5,7 +5,7 @@ import {
   FooterLink,
   FooterListWrapper,
   SocialMediaWrapper,
-} from "../elements"
+} from "../styles"
 import { Twitter, GitHub } from "@material-ui/icons"
 
 const Footer = ({ siteTitle, navLinks }) => {

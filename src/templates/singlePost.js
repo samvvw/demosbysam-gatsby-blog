@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 
 import { Layout, SEO, Post } from "../components"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { H1 } from "../elements"
+import { H1 } from "../styles"
 
 import "../../language-tabs.css"
 import { MDXProvider } from "@mdx-js/react"

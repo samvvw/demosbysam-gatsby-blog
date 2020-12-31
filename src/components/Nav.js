@@ -11,26 +11,14 @@ import {
   CloseMenuWrapper,
   DrawerLinksWrapper,
   LogoWrapper,
-} from "../elements"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+} from "../styles"
+import logo from "../images/logo.svg"
 
 import MenuIcon from "@material-ui/icons/Menu"
 import CloseIcon from "@material-ui/icons/Close"
 
 const Nav = ({ siteTitle, navLinks }) => {
   const [drawer, setDrawer] = useState({ drawer: "" })
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "drawing_svg.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
 
   const navArr = () => {
     return navLinks.es.map((el, i) => (
@@ -56,7 +44,7 @@ const Nav = ({ siteTitle, navLinks }) => {
     <HeaderWrapper>
       <NavWrapper>
         <LogoWrapper to="/">
-          <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+          <img src={logo} alt="" />
           <h1>{siteTitle}</h1>
         </LogoWrapper>
         <ListWrapper style={{ listStyle: "none" }}>{navArr()}</ListWrapper>
@@ -83,6 +71,4 @@ Nav.defaultProps = {
   siteTitle: ``,
 }
 
-
 export { Nav }
-

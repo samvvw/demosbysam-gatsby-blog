@@ -9,7 +9,7 @@ module.exports = {
     author: `@demosbysam`,
     navLinks: {
       en: ["Home", "Demos", "Blog", "About", "Contact"],
-      es: ["Inicio", "Demos", "Blog", "Sobre nosotros", "Contacto"],
+      es: ["Inicio", "Demos", "Blog", "Acerca", "Contacto"],
     },
   },
   plugins: [
