@@ -8,7 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { GridWrapper, MainWrapper } from "../elements"
+import { GridWrapper, MainWrapper } from "../styles"
 import { Nav, Footer } from "./"
 
 const Layout = ({ children }) => {

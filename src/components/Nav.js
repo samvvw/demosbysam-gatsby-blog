@@ -11,7 +11,7 @@ import {
   CloseMenuWrapper,
   DrawerLinksWrapper,
   LogoWrapper,
-} from "../elements"
+} from "../styles"
 import logo from "../images/logo.svg"
 
 import MenuIcon from "@material-ui/icons/Menu"

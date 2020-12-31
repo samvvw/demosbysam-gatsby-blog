@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import { Layout, SEO, AllPostsContainer, PostCard } from "../components"
-import { H1, P } from "../elements"
+import { H1, P } from "../styles"
 import Img from "gatsby-image"
 
 const allPosts = ({ pageContext, data }) => {

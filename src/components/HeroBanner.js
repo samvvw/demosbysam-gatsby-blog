@@ -1,5 +1,5 @@
 import React from "react"
-import { HeroWrapper, TechLogosWrapper } from "../elements"
+import { HeroWrapper, TechLogosWrapper } from "../styles"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import CSSLOGO from "../images/css3.svg"
