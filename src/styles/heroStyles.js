@@ -12,7 +12,7 @@ export const HeroWrapper = styled.div`
 
   @media ${props => props.theme.breakpoints.mobile} {
     grid-column: 1 / span 9;
-    height: 80vh;
+    height: 100vh;
   }
 `
 export const HeroFilter = styled.div`

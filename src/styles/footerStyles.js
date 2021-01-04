@@ -35,6 +35,8 @@ export const FooterContent = styled.div`
 
   @media ${props => props.theme.breakpoints.mobile} {
     grid-column: 1 / span 8;
+    flex-direction: column;
+    justify-content: center;
   }
 `
 
@@ -46,7 +48,7 @@ export const FooterListWrapper = styled.ul`
   padding: 0.75rem 0;
 
   & > li {
-    font-size: 0.8rem;
+    font-size: 1rem;
     & > a {
       color: ${props => props.theme.palette.text.light1};
     }
@@ -54,6 +56,29 @@ export const FooterListWrapper = styled.ul`
   & > li:hover {
     & > a {
       color: ${props => props.theme.palette.text.light2};
+    }
+  }
+
+  & > hr {
+    width: 70%;
+    margin: auto;
+    display: none;
+  }
+
+  @media ${props => props.theme.breakpoints.tablet} {
+  }
+
+  @media ${props => props.theme.breakpoints.mobile} {
+    & > li {
+      text-align: center;
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    & > hr {
+      display: block;
+    }
+    hr:last-child {
+      display: none;
     }
   }
 `
@@ -77,5 +102,28 @@ export const SocialMediaWrapper = styled.div`
 
   & > * {
     margin: 0 0.5rem;
+  }
+
+  @media ${props => props.theme.breakpoints.tablet} {
+  }
+
+  @media ${props => props.theme.breakpoints.mobile} {
+    justify-content: center;
+    & > * {
+      margin: 1rem 0.5rem;
+    }
+  }
+`
+
+export const Copyright = styled.h6`
+  position: absolute;
+  right: 2%;
+  bottom: 2%;
+  @media ${props => props.theme.breakpoints.tablet} {
+  }
+
+  @media ${props => props.theme.breakpoints.mobile} {
+    transform: translateX(50%);
+    right: 50%;
   }
 `
