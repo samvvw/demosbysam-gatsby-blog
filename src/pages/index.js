@@ -1,57 +1,27 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
 
 import { Layout, SEO, HeroBanner, Container } from "../components"
-import Img from "gatsby-image"
 
-const IndexPage = ({ data }) => (
+const IndexPage = () => (
   <Layout>
     <SEO title="Inicio" />
     <HeroBanner />
     <Container
       flexDirection="column"
-      alignItems="center"
-      justifyContent="center"
-      // style={{
-      //   display: "flex",
-      //   flexDirection: "column",
-      //   alignItems: "center",
-      //   justifyContent: "center",
-      // }}
+      alignItems="flex-start"
+      justifyContent="space-between"
     >
-      <h1>Under Construction...</h1>
-      <h1 style={{ margin: "2rem 0" }}>
-        {data.allContentfulHomePage.edges[0].node.heroImage.title}
-      </h1>
-      <Img
-        style={{ minWidth: "360px", height: "360px", marginBottom: "2rem" }}
-        fluid={data.placeholderImage.childImageSharp.fluid}
-      />
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/contact/">Contact</Link>
+      <div style={{ marginBottom: "1rem" }}>
+        <h1>Main Call To Action</h1>
+      </div>
+      <div style={{ marginBottom: "1rem" }}>
+        <h1>Demos destacados</h1>
+      </div>
+      <div style={{ marginBottom: "1rem" }}>
+        <h1>Articulos destacados</h1>
+      </div>
     </Container>
   </Layout>
 )
 
 export default IndexPage
-
-export const pageQuery = graphql`
-  query HomePageQuery {
-    allContentfulHomePage {
-      edges {
-        node {
-          heroImage {
-            title
-          }
-        }
-      }
-    }
-    placeholderImage: file(relativePath: { eq: "IMG_8384.jpeg" }) {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
