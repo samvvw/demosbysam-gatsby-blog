@@ -1,7 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 
-import { Layout, SEO, Image, Container } from "../components"
+import { Layout, SEO, Container } from "../components"
 
 const Demos = ({ data }) => {
   const demos = data.allContentfulDemos.edges
@@ -9,10 +9,7 @@ const Demos = ({ data }) => {
     <Layout>
       <Container flexDirection="column" justifyContent="space-around">
         <SEO title="Demos" />
-        <br />
-        <br />
         <h1>Demos Page</h1>
-        <br />
         {demos.map((demo, index) => (
           <div key={index}>
             <h1>{demo.node.title}</h1>
@@ -21,15 +18,6 @@ const Demos = ({ data }) => {
             <Link to={`/demos/${demo.node.slug}`}>read more...</Link>
           </div>
         ))}
-        <br />
-        <p>Page under construction...</p>
-        <br />
-        <br />
-        <div style={{ maxWidth: "800px" }}>
-          <Image />
-        </div>
-        <br />
-        <br />
       </Container>
     </Layout>
   )
