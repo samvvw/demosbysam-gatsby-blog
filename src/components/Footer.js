@@ -14,7 +14,7 @@ const Footer = ({ siteTitle, navLinks }) => {
     return navLinks.es.map((el, i) => (
       <>
         <FooterLink
-          key={el}
+          key={i}
           to={`/${
             navLinks.en[i] !== "Home"
               ? navLinks.en[i].toLowerCase().split(" ").join("-")
