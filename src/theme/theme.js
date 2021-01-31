@@ -10,8 +10,8 @@ export default {
       dark: "#002F61",
     },
     secondary: {
-      main: "#FFA200",
-      dark: "#B3760C",
+      main: "#f0a50f",
+      dark: "#bf7f0d",
     },
     accent: {
       light: "#ffb74d",
@@ -45,7 +45,7 @@ export default {
       dark2: "rgba(0, 0, 0, 0.87)",
     },
     surface: {
-      light1: "#fff",
+      light1: "#e4e8ed",
       light2: "#fafafa",
       dark1: "#424242",
       dark2: "#303030",
@@ -71,7 +71,7 @@ export default {
     link: "color 0.2s ease",
   },
   shadows: {
-    shadow1: "0px 5px 20px rgba(30, 30, 31, 0.05)",
+    shadow1: "10px 5px 20px rgba(30, 30, 31, 0.05)",
   },
   nav: {
     height: "8rem",

@@ -4,7 +4,8 @@ export const HeroWrapper = styled.div`
   grid-column: 1 / span 14;
   position: relative;
   overflow: hidden;
-  height: 20rem;
+  height: 25rem;
+
   @media ${props => props.theme.breakpoints.tablet} {
     grid-column: 1 / span 9;
     height: 16rem;
@@ -20,8 +21,8 @@ export const HeroFilter = styled.div`
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: white;
-  opacity: 0.4;
+  background-color: ${props => props.theme.palette.surface.dark1};
+  opacity: 0.2;
   z-index: 300;
 `
 

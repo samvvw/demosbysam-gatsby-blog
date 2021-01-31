@@ -10,7 +10,8 @@ export const HeaderWrapper = styled.header`
   gap: 0 2rem;
   position: fixed;
   z-index: 1000;
-  background-color: ${props => props.theme.palette.primary.dark};
+  background-color: ${props => props.theme.palette.surface.light1};
+  box-shadow: ${props => props.theme.shadows.shadow1};
 
   @media ${props => props.theme.breakpoints.tablet} {
     grid-template-columns: 2rem repeat(6, 1fr) 2rem;
@@ -39,7 +40,7 @@ export const NavWrapper = styled.nav`
 `
 
 export const LogoWrapper = styled(props => <Link {...props} />)`
-  color: ${props => props.theme.palette.text.light1};
+  color: ${props => props.theme.palette.primary.dark};
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -76,13 +77,14 @@ export const ListWrapper = styled.ul`
 
   & > li {
     font-size: 1.2rem;
+    font-weight: 500;
     & > a {
-      color: ${props => props.theme.palette.text.light1};
+      color: ${props => props.theme.palette.primary.dark};
     }
   }
   & > li:hover {
     & > a {
-      color: ${props => props.theme.palette.text.light2};
+      color: ${props => props.theme.palette.secondary.main};
     }
   }
 
@@ -109,14 +111,14 @@ export const NavLink = styled(props => <NavList {...props} />)`
 
 export const MenuWrapper = styled.div`
   display: none;
-  color: ${props => props.theme.palette.text.light1};
+  color: ${props => props.theme.palette.primary.dark};
   justify-content: flex-end;
   align-items: center;
   cursor: pointer;
   min-height: 80px;
 
   & :hover {
-    color: ${props => props.theme.palette.text.light2};
+    color: ${props => props.theme.palette.secondary.main};
   }
 
   @media ${props => props.theme.breakpoints.tablet} {
@@ -131,7 +133,7 @@ export const MenuWrapper = styled.div`
 export const DrawerWrapper = styled.div`
   display: none;
   position: fixed;
-  background-color: ${props => props.theme.palette.primary.main};
+  background-color: ${props => props.theme.palette.primary.dark};
   height: 100%;
   width: 100%;
   transform: translateX(100%);
