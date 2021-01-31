@@ -18,7 +18,7 @@ const HeroBanner = () => {
     query {
       placeholderImage: file(relativePath: { eq: "code.png" }) {
         childImageSharp {
-          fluid(maxWidth: 900) {
+          fluid(maxWidth: 1600) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -29,7 +29,7 @@ const HeroBanner = () => {
     <HeroWrapper>
       <Img
         fluid={data.placeholderImage.childImageSharp.fluid}
-        style={{ height: "100%" }}
+        style={{ height: "100%", opacity: "0.8" }}
       />
       <HeroFilter />
       <TechLogosWrapper>
