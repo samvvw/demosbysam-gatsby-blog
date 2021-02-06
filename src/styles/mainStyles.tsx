@@ -9,7 +9,7 @@ export const MainWrapper = styled.main`
   grid-template-rows: auto;
   gap: 0 2rem;
   /* border: red solid 3px; */
-
+  background-color: ${props => props.theme.palette.surface.light1};
   @media ${props => props.theme.breakpoints.tablet} {
     grid-template-columns: 1rem repeat(6, 1fr) 1rem;
     grid-gap: 0 1rem;

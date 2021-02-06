@@ -46,7 +46,8 @@ export default {
     },
     surface: {
       light1: "#e4e8ed",
-      light2: "#fafafa",
+      light2: "#dfe2e5",
+      light3: "#fafafa",
       dark1: "#424242",
       dark2: "#303030",
       dividerLight: "rgba(0, 0, 0, 0.12)",
@@ -71,7 +72,7 @@ export default {
     link: "color 0.2s ease",
   },
   shadows: {
-    shadow1: "10px 5px 20px rgba(30, 30, 31, 0.05)",
+    shadow1: "0px 5px 10px rgba(30, 30, 31, 0.1)",
   },
   nav: {
     height: "8rem",
