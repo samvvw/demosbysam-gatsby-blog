@@ -12,7 +12,7 @@ import {
   DrawerLinksWrapper,
   LogoWrapper,
 } from "../styles"
-const logo = require("../images/logo.svg")
+const logo = require("../images/logo2_2.svg")
 
 import MenuIcon from "@material-ui/icons/Menu"
 import CloseIcon from "@material-ui/icons/Close"
