@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 export const HeaderWrapper = styled.header`
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr repeat(12, minmax(auto, 4.2rem)) 1fr;
+  grid-template-columns: 1fr repeat(12, minmax(auto, 5rem)) 1fr;
   grid-template-rows: ${props => props.theme.nav.height};
   gap: 0 2rem;
   position: fixed;
