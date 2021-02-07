@@ -14,7 +14,6 @@ export const PostWrapper = styled.article`
     margin: 0 auto;
     display: block;
   }
-  /* hello this is a test */
 
   h1,
   h2,
