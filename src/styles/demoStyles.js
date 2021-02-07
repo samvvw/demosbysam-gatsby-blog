@@ -9,7 +9,9 @@ export const DemoWrapper = styled.article`
   z-index: 10;
 
   img {
-    max-width: 80%;
+    max-width: 70%;
+    margin: 0 auto;
+    display: block;
   }
 
   h1,
