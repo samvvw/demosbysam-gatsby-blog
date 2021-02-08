@@ -16,7 +16,7 @@ import GATSBYLOGO from "../images/gatsby-logo.svg"
 const HeroBanner = () => {
   const data = useStaticQuery(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "code4.png" }) {
+      placeholderImage: file(relativePath: { eq: "bg-texture.png" }) {
         childImageSharp {
           fluid(maxWidth: 1600) {
             ...GatsbyImageSharpFluid
@@ -31,7 +31,7 @@ const HeroBanner = () => {
         fluid={data.placeholderImage.childImageSharp.fluid}
         style={{ height: "100%", opacity: "1" }}
       />
-      {/* <HeroFilter /> */}
+      <HeroFilter />
       <TechLogosWrapper>
         <img src={HTMLLOGO} alt="" />
         <img src={CSSLOGO} alt="" />
