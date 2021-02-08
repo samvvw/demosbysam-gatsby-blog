@@ -6,7 +6,6 @@ export const HeroWrapper = styled.div`
   overflow: hidden;
   height: 25rem;
   background-color: ${props => props.theme.palette.surface.light1};
-  box-shadow: ${props => props.theme.shadows.shadow1};
 
   @media ${props => props.theme.breakpoints.tablet} {
     grid-column: 1 / span 9;
@@ -23,8 +22,14 @@ export const HeroFilter = styled.div`
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: ${props => props.theme.palette.surface.light1};
-  opacity: 0.3;
+  /* background-color: ${props => props.theme.palette.surface.light1}; */
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    ${props => props.theme.palette.surface.light1} 80%
+  );
+  opacity: 1;
   z-index: 300;
 `
 

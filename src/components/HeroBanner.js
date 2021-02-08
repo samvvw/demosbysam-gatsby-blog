@@ -12,7 +12,6 @@ import NPMLOGO from "../images/npm-logo.svg"
 import REACTLOGO from "../images/react-logo.svg"
 import VSCODELOGO from "../images/vscode-logo.svg"
 import GATSBYLOGO from "../images/gatsby-logo.svg"
-import SVGTEXTURE from "../images/bg-texture.svg"
 
 const HeroBanner = () => {
   const data = useStaticQuery(graphql`
@@ -32,9 +31,6 @@ const HeroBanner = () => {
         fluid={data.placeholderImage.childImageSharp.fluid}
         style={{ height: "100%", opacity: "1" }}
       />
-      {/* <div style={{ height: "100%", opacity: "1" }}>
-        <img src={SVGTEXTURE} alt="" />
-      </div> */}
       <HeroFilter />
       <TechLogosWrapper>
         <img src={HTMLLOGO} alt="" />
